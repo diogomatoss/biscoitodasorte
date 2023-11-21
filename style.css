@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bg-gradient: linear-gradient(45deg, #190361, #bb00ff);
+    --color-white: #FFF;
+    --color-light-blue: #E4EDF1; 
+    --color-orange: #FF9500;
+    --color-bluenavy: #34355B;
+    --color-black: #000;
+}
+
+.hide {
+    display: none;
+}
+
+p, button {    
+    font-family: 'DM Sans', sans-serif;    
+
+}
+
+body {        
+    display: grid;
+    place-items: center;
+    background: var(--bg-gradient);    
+    height: 100vh;
+    font-size: 1.6rem;
+
+    animation: bgGradient 10s ease infinite;
+    background-size: 200% 200%;
+}
+
+main {
+    background: var(--color-white);
+    width: 42.8rem;
+    text-align: center;
+    padding: 4.8rem 6.4rem 6.4rem;
+    border-radius: .5rem;
+
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+}
+
+.screen1 {
+    padding: 0 2rem;
+}
+
+h1, h2 {
+    color: var(--color-bluenavy);    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4rem;    
+    font-weight: bold;
+}
+
+.screen1 p {
+    color: var(--color-bluenavy);
+    font-size: 1.5rem;
+    margin: 1.4rem 0 2.6rem;
+}
+
+.screen1 img:hover {
+    animation: shake 0.2s;
+    animation-iteration-count: 1000;
+    cursor: pointer;    
+}
+
+
+/* SCREEN 2 */
+.screen2 .messageLucky {
+    background: var(--color-light-blue);
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 1rem;    
+    margin: 1.7rem 0 6.1rem;
+
+    animation: messageUp 3s;
+    transition: 1s;
+}
+
+.screen2 .messageLucky p {
+    color: var(--color-black);
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.4rem;
+}
+
+.screen2 img {
+    width: 100%;
+}
+
+.screen2 button {
+    background: var(--color-orange);
+    padding: 1.6rem;
+    border-radius: .4rem;
+    border: 0;
+    margin-top: 6.0rem;
+    cursor: pointer;
+
+    color: var(--color-white);
+}
+
+/* ANIMATIONS */
+@keyframes shake {
+    0% {margin-left: 0;}
+    25% {margin-left: 4px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -4px;}
+    100% {margin-left: 0;}
+}
+
+@keyframes messageUp {
+    0% {
+        opacity: 0;      
+        transform: translateY(180px) scale(0);        
+    }    
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);       
+    }        
+  }
+
+  @keyframes bgGradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
