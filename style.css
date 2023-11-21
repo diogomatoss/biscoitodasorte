@@ -11,6 +11,7 @@
     --color-white: #FFF;
     --color-light-blue: #E4EDF1; 
     --color-orange: #FF9500;
+    --color-orange-hover: #ee8c02;
     --color-bluenavy: #34355B;
     --color-black: #000;
 }
@@ -99,6 +100,10 @@ h1, h2 {
     cursor: pointer;
 
     color: var(--color-white);
+}
+
+.screen2 button:hover {
+    background: var(--color-orange-hover);
 }
 
 /* ANIMATIONS */
